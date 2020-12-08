@@ -5,18 +5,18 @@ export default function navegacaoTabs(){
   const divsNono = document.querySelectorAll("#nono .serie__conteudo section");
   const menuMedio = document.querySelectorAll('#medio .serie__menu li');
   const divsMedio = document.querySelectorAll("#medio .serie__conteudo section");
-  const indicador = document.querySelector('.geral__titulo h1')
+  const indicador = document.querySelector('.geral__titulo h1');
 
   function activeTab(secoes, index){
     secoes.forEach(secao => secao.style.display = 'none')
-    secoes[index].style.display = 'block'
+    secoes[index].style.display = 'block';
   }
 
   if(menuQuinto.length && divsQuinto){
     menuQuinto.forEach((btn, index) => {
       btn.addEventListener("click", () => {
         activeTab(divsQuinto,index)
-        indicador.innerText = `${btn.innerHTML} - 5° ano`
+        indicador.innerText = `${btn.innerHTML} - 5° ano`;
         menuQuinto.forEach(btn => {
           btn.classList.remove('ativo');
         })
@@ -28,7 +28,7 @@ export default function navegacaoTabs(){
     menuNono.forEach((btn, index) => {
       btn.addEventListener("click", () => {
         activeTab(divsNono,index)
-        indicador.innerHTML = `${btn.innerHTML} - 9° ano`
+        indicador.innerHTML = `${btn.innerHTML} - 9° ano`;
         menuNono.forEach(btn => {
           btn.classList.remove('ativo');
         })
