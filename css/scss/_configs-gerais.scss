@@ -1,0 +1,61 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+a{
+  text-decoration: none;
+  color: #000;
+  display: block;
+}
+img{
+  max-width: 100%;
+  display: block;
+}
+ul{
+  list-style: none;
+}
+
+//cores
+$cor-principal: #341C92;
+$branco: #fff;
+
+//fontes
+$fonte: Arial, Helvetica, sans-serif;
+
+//mixin reponsivo
+@mixin resp($disp) {
+  @if $disp == t {
+    @media only screen and (max-width:768px){
+      @content;
+    }
+  }
+  @if $disp == m {
+    @media only screen and (max-width: 480px){
+      @content;
+    }
+  }
+}
+
+//funcao px para em 
+@function em($px, $contexto: 16){
+  @return ($px/$contexto) * 1em;
+}
+
+//mixin para o container
+@mixin container {
+  max-width: 1000px;
+  margin: 0 auto;
+  @include resp(t){
+    max-width: 700px;
+    padding: 0 10px;
+  }
+  @include resp(m){
+    max-width: 100%;
+    padding: 0 10px;
+  }
+} 
+
+.container{
+  @include container;
+}

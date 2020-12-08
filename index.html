@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Educação - mogi open data</title>
+  <link rel="stylesheet" href="./css/scss/style.css">
+</head>
+<body>
+  <header class="header">
+    <div class="header__container container ">
+      <a href="#" class="header__logo">LOGO</a>
+      <nav>
+        <ul class="header__menu">
+          <li class="header__item"><a href="#" class="header__link">INICIO</a></li>
+          <li class="header__item"><a href="#" class="header__link">CONTATO</a></li>
+          <li class="header__item"><a href="#" class="header__link">REFÊRENCIAS</a></li>
+          <li class="header__item"><a href="#" class="header__link">SOBRE</a></li>
+        </ul>
+        <button class="header__btn">=</button>
+      </nav>
+    </div>
+  </header>
+
+  <section class="banner">
+    <h1 class="banner__titulo">MOGI OPEN DATA</h1>
+    <h3 class="banner__subtitulo">Educação</h3>
+  </section>
+
+  <div class="container geral">
+    <div class="geral__header">
+      <div class="geral__titulo">
+        <h1>INTRODUÇÃO - 5° ano</h1>
+      </div> 
+      <div class="geral__analise">
+          <p>Ano de analise</p>
+          <div class="geral__filtro">
+            <button class="geral__btn" id="quinto">5° ano</button>
+            <button class="geral__btn" id="nono">9° ano</button>
+            <button class="geral__btn" id="medio">Ensino médio</button>
+          </div>
+      </div>
+    </div>
+
+    <div class="serie" id="quinto">
+      <aside class="serie__aside">
+        <button class="serie__check">Menu +</button>
+        <nav>
+          <ul class="serie__menu">
+            <li>Introdução</li>
+            <li>Notas</li>
+            <li>Computadores</li>
+            <li>Livros</li>
+            <li>Biblioteca</li>
+            <li>Incentivo dos pais</li>
+            <li>Escolaridade mãe</li>
+            <li>Escolaridade pai</li>
+          </ul>
+        </nav>
+      </aside>
+      <div class="serie__conteudo">
+          <section class="introducao" id="introducao">
+
+            <div class="introducao__item">
+              <input type="checkbox" class="introducao__check" id="conteudo-check" checked>
+              <div class="introducao__container">
+                <label for="conteudo-check">
+                  <h2 class="introducao__titulo">De onde vem os dados?</h2>
+                </label>
+                <p class="introducao__texto">Os dados e resultados mostrados foram obtidos e gerados através os microdados do SAEB (Sistema de Avaliação da Educação Básica) disponíveis pelo INEP neste link.</p>
+              </div>
+            </div>
+
+            <div class="introducao__item">
+              <input type="checkbox" class="introducao__check" id="conteudo-check-1">
+              <div class="introducao__container">
+                <label for="conteudo-check-1">
+                  <h2 class="introducao__titulo">O que são os microdados do SAEB?</h2>
+                </label>
+                <p class="introducao__texto">Os microdados constituem um conjunto de arquivos contendo as provas, gabaritos, respostas de questionários socioeconômicos, respostas das provas e notas obtidas pelos alunos. <br><br>
+                  Os dados são fornecidos pelo INEP sempre depois da computação dos resultados e ficam disponíveis e abertos para qualquer um acessar gratuitamente, como uma ferramenta de transparência. No entanto, sua manipulação e interpretação não são triviais, cabendo a entidades especializadas (como a MogiOpenData) em tratamento de dados a sua manipulação. <br><br>
+                  Os dados estão anonimizados, isto é, não é possível descobrir quem respondeu ou quais alunos estão nos dados apresentados.</p>
+              </div>
+            </div>
+
+            <div class="introducao__item">
+              <input type="checkbox" class="introducao__check" id="conteudo-check-2">
+              <div class="introducao__container">
+                <label for="conteudo-check-2">
+                  <h2 class="introducao__titulo">Quais escolas estão incluida nos dados?</h2>
+                </label>
+                <div class="introducao__texto">
+                  <p class="introducao__texto">Os dados contemplam uma amostra representativa da sociedade, de forma que a quantidade de alunos por escola se dá de forma desigual. As 5 escolas com mais dados nas análises são:<br/><br/>
+                    <table class="introducao__tabela" width='100%'>
+                      <thead>
+                        <tr>
+                          <th>Escolas</th>
+                          <th>Quantidade de dados</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>WALDOMIRO CALMAZINI PREFEITO EMEF</td>
+                          <td>958</td>
+                        </tr>
+                        <tr>
+                          <td>CID CHIARELLI PROF DA FUNDACAO EDUCACAO GUACUANA</td>
+                          <td>893</td>
+                        </tr>
+                        <tr>
+                          <td>ANIRA FRANCO DE CAMPOS PROFA EMEF</td>
+                          <td>769</td>
+                        </tr>
+                        <tr>
+                          <td>JARDIM SANTA TEREZINHA II EMEF</td>
+                          <td>740</td>
+                        </tr>
+                        <tr>
+                          <td>ADIRCE CENEDEZE CAVEANHA EMEF</td>
+                          <td>730</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="notas">
+            <h1>Notas 5</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores eaque aspernatur vero quod qui non delectus incidunt nobis maxime laboriosam, itaque sapiente ad. Tempore, sapiente? Possimus recusandae molestiae amet explicabo optio iusto obcaecati quos vero, necessitatibus, impedit voluptatibus alias ut blanditiis doloremque iure? Unde debitis ipsam, fugiat facilis animi deserunt laudantium. Ipsum non dolore quod ex unde voluptates numquam reprehenderit totam minima nulla fugit quibusdam minus nemo tempora aperiam, odio, exercitationem cumque soluta debitis inventore esse. Inventore, porro aliquam. Inventore sed quaerat adipisci eos ipsam cum minus, temporibus molestiae praesentium. Laudantium rem, corporis ipsam hic ullam autem vero. Aperiam, omnis!</p>
+          </section>
+          <section class="computadores">
+            <h1>Computadores 5</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum vitae magni quisquam officiis. Quam voluptatibus nam pariatur laudantium? Eius, ducimus voluptates. Amet voluptate earum ipsa rem deserunt accusamus beatae! Non est vel eos ex temporibus, numquam accusamus, fuga unde cum distinctio ratione voluptatibus dolorum saepe nesciunt placeat iusto molestiae veniam.</p>
+          </section>
+          <section class="livros"><h1>Livros 5</h1></section>
+          <section class="biblioteca"><h1>Biblioteca 5</h1></section>
+          <section class="incentivopais"><h1>Incentivo dos pais 5</h1></section>
+          <section class="escolaridademae"><h1>Escolaridade mãe 5</h1></section>
+          <section class="escolaridadepai"><h1>Escolaridade pai 5</h1></section>
+      </div>
+    </div>
+
+    <div class="serie" id="nono">
+      <aside class="serie__aside">
+        <button class="serie__check">Menu +</button>
+        <nav>
+          <ul class="serie__menu">
+            <li>Introdução</li>
+            <li>Notas</li>
+            <li>Computadores</li>
+            <li>Livros</li>
+            <li>Biblioteca</li>
+            <li>Incentivo dos pais</li>
+            <li>Escolaridade mãe</li>
+            <li>Escolaridade pai</li>
+          </ul>
+        </nav>
+      </aside>
+      <div class="serie__conteudo">
+          <section class="introducao" id="introducao">
+            <h1>Introdução 9</h1>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab perspiciatis voluptates illo dicta voluptatibus eveniet soluta voluptate distinctio dolores placeat quae, sit ullam doloribus ea. Quo corrupti nobis nesciunt ad.
+            </p>            
+          </section>
+
+          <section class="notas">
+            <h1>Notas 9</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores eaque aspernatur vero quod qui non delectus incidunt nobis maxime laboriosam, itaque sapiente ad. Tempore, sapiente? Possimus recusandae molestiae amet explicabo optio iusto obcaecati quos vero, necessitatibus, impedit voluptatibus alias ut blanditiis doloremque iure? Unde debitis ipsam, fugiat facilis animi deserunt laudantium. Ipsum non dolore quod ex unde voluptates numquam reprehenderit totam minima nulla fugit quibusdam minus nemo tempora aperiam, odio, exercitationem cumque soluta debitis inventore esse. Inventore, porro aliquam. Inventore sed quaerat adipisci eos ipsam cum minus, temporibus molestiae praesentium. Laudantium rem, corporis ipsam hic ullam autem vero. Aperiam, omnis!</p>
+          </section>
+          <section class="computadores">
+            <h1>Computadores 9</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum vitae magni quisquam officiis. Quam voluptatibus nam pariatur laudantium? Eius, ducimus voluptates. Amet voluptate earum ipsa rem deserunt accusamus beatae! Non est vel eos ex temporibus, numquam accusamus, fuga unde cum distinctio ratione voluptatibus dolorum saepe nesciunt placeat iusto molestiae veniam.</p>
+          </section>
+          <section class="livros"><h1>Livros 9</h1></section>
+          <section class="biblioteca"><h1>Biblioteca 9</h1></section>
+          <section class="incentivopais"><h1>Incentivo dos pais 9</h1></section>
+          <section class="escolaridademae"><h1>Escolaridade mãe 9</h1></section>
+          <section class="escolaridadepai"><h1>Escolaridade pai 9</h1></section>
+      </div>
+    </div>
+
+    <div class="serie" id="medio">
+      <aside class="serie__aside">
+        <button class="serie__check">Menu +</button>
+        <nav>
+          <ul class="serie__menu">
+            <li>Introdução</li>
+            <li>Notas</li>
+            <li>Computadores</li>
+            <li>Livros</li>
+            <li>Biblioteca</li>
+            <li>Incentivo dos pais</li>
+            <li>Escolaridade mãe</li>
+            <li>Escolaridade pai</li>
+          </ul>
+        </nav>
+      </aside>
+      <div class="serie__conteudo">
+          <section class="introducao" id="introducao">
+            <h1>Introdução m</h1>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab perspiciatis voluptates illo dicta voluptatibus eveniet soluta voluptate distinctio dolores placeat quae, sit ullam doloribus ea. Quo corrupti nobis nesciunt ad.
+            </p>            
+          </section>
+
+          <section class="notas">
+            <h1>Notas m</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores eaque aspernatur vero quod qui non delectus incidunt nobis maxime laboriosam, itaque sapiente ad. Tempore, sapiente? Possimus recusandae molestiae amet explicabo optio iusto obcaecati quos vero, necessitatibus, impedit voluptatibus alias ut blanditiis doloremque iure? Unde debitis ipsam, fugiat facilis animi deserunt laudantium. Ipsum non dolore quod ex unde voluptates numquam reprehenderit totam minima nulla fugit quibusdam minus nemo tempora aperiam, odio, exercitationem cumque soluta debitis inventore esse. Inventore, porro aliquam. Inventore sed quaerat adipisci eos ipsam cum minus, temporibus molestiae praesentium. Laudantium rem, corporis ipsam hic ullam autem vero. Aperiam, omnis!</p>
+          </section>
+          <section class="computadores">
+            <h1>Computadores m</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum vitae magni quisquam officiis. Quam voluptatibus nam pariatur laudantium? Eius, ducimus voluptates. Amet voluptate earum ipsa rem deserunt accusamus beatae! Non est vel eos ex temporibus, numquam accusamus, fuga unde cum distinctio ratione voluptatibus dolorum saepe nesciunt placeat iusto molestiae veniam.</p>
+          </section>
+          <section class="livros"><h1>Livros m</h1></section>
+          <section class="biblioteca"><h1>Biblioteca m</h1></section>
+          <section class="incentivopais"><h1>Incentivo dos pais m</h1></section>
+          <section class="escolaridademae"><h1>Escolaridade mãe m</h1></section>
+          <section class="escolaridadepai"><h1>Escolaridade pai m</h1></section>
+      </div>
+    </div>
+
+    
+  </div>
+
+  <script type="module" src="./js/script.js"></script>
+</body>
+</html>
