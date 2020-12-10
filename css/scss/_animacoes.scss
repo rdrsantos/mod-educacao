@@ -1,0 +1,18 @@
+[data-anima]{
+  opacity: 0;
+  transition: .5s;
+  &.ativo{
+    opacity: 1;
+    transform: translate3d(0,0,0);
+  }
+}
+
+[data-anima="left"]{
+  transform: translate3d(-50px,0,0);
+}
+[data-anima="right"]{
+  transform: translate3d(50px,0,0);
+}
+[data-anima="up"]{
+  transform: translate3d(0,-50px,0);
+}

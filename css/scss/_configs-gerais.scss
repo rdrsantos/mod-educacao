@@ -50,6 +50,7 @@ $fonte: Arial, Helvetica, sans-serif;
   @include resp(t){
     max-width: 700px;
     padding: 50px 10px;
+    overflow: hidden;
   }
   @include resp(m){
     max-width: 100%;

@@ -29,6 +29,7 @@ ul {
   .container {
     max-width: 700px;
     padding: 50px 10px;
+    overflow: hidden;
   }
 }
 
@@ -311,6 +312,28 @@ ul {
 
 .notas, .computadores, .livros, .biblioteca, .incentivopais, .escolaridademae, .escolaridadepai {
   display: none;
+}
+
+[data-anima] {
+  opacity: 0;
+  transition: .5s;
+}
+
+[data-anima].ativo {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+
+[data-anima="left"] {
+  transform: translate3d(-50px, 0, 0);
+}
+
+[data-anima="right"] {
+  transform: translate3d(50px, 0, 0);
+}
+
+[data-anima="up"] {
+  transform: translate3d(0, -50px, 0);
 }
 
 body {
