@@ -1,0 +1,233 @@
+.geral{
+  margin: 10px auto 50px;
+  box-shadow: 0px 0px 2px #0005;
+  background-color: #fff;
+  border-radius: 10px;
+  position: relative;
+}
+
+.geral__header{
+  background-color: $cor-principal;
+  padding: 20px 10px;
+  color: $branco;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  @include resp(t){
+    flex-direction: column;
+  }
+}
+
+.geral__titulo{
+  margin: 0 auto;
+  @include resp(t){
+    margin-bottom: 20px;
+  }
+}
+
+.geral__titulo h1{
+  font-size: em(30);
+  @include resp(m){
+    font-size: em(25);
+  }
+}
+
+.geral__analise p {
+  font-size: em(18);
+}
+
+.geral__filtro{
+  @include resp(m){
+    display: flex;
+    overflow: scroll;
+  }
+}
+
+.geral__btn{
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+  outline: none;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: em(14);
+  &:hover{
+    background-color: #0062CC;
+    color: #fff;
+  }
+  &.ativo{
+    background-color: #0062CC;
+    color: #fff;
+  }
+  @include resp(m){
+    margin: 5px;
+  }
+}
+
+.serie{
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  grid-gap: 20px;
+  padding: 20px 0;
+  @include resp(t){
+    grid-template-columns: 1fr;
+  }
+}
+
+.serie__aside{
+  border-right: 1px solid #ccc;
+}
+
+.serie__check{
+  display: none;
+  padding: 15px 30px;
+  background-color: $cor-principal;
+  color: $branco;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-size: em(18);
+  @include resp(t){
+    display: block;
+    margin: 10px auto;
+  }
+}
+
+.serie__menu{
+  @include resp(t){
+    height: 0;
+    visibility: hidden;
+    opacity: 0;
+    &.ativo{
+      height: auto;
+      visibility: visible;
+      opacity: 1;
+    }
+  }  
+}
+
+.serie__menu li{
+  padding: 15px 5px 15px 15px;
+  border-bottom: 1px solid #ddd;
+  cursor: pointer;
+  font-weight: bold;
+  &:hover{
+    color: #fff;
+    border-radius: 10px;
+    background-color: $cor-principal;
+  }
+  &.ativo{
+    color: #fff;
+    background-color: $cor-principal;
+    border-radius: 10px;
+  }
+}
+
+.serie#nono,.serie#medio{
+  display: none;
+}
+
+.serie__conteudo{
+  padding-top: 20px;
+  overflow-y: scroll;
+  &::-webkit-scrollbar {
+    width: 4px;
+    height: 4px;
+  }
+  &::-webkit-scrollbar-button {
+    width: 0px;
+    height: 0px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: #0a4a8f;
+    border-radius: 50px;
+  }
+  &::-webkit-scrollbar-thumb:hover {
+    background: #152a6a;
+  }
+  &::-webkit-scrollbar-thumb:active {
+    background: #4249ae;
+  }
+  &::-webkit-scrollbar-track {
+    background: #ffffff;
+    border: 0px none #ffffff;
+    border-radius: 50px;
+  }
+  &::-webkit-scrollbar-track:hover {
+    background: #ffffff;
+  }
+  &::-webkit-scrollbar-track:active {
+    background: #ffffff;
+  }
+  &::-webkit-scrollbar-corner {
+    background: transparent;
+  }
+}
+
+.introducao__item{
+  margin-bottom: 20px;
+}
+
+.introducao__titulo{
+  position: relative;
+  padding-left: 15px;
+  cursor: pointer;
+  &::before{
+    content: '';
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    width: 10px;
+    height: 100%;
+    background-color: $cor-principal;
+  }
+  &::after{
+    content: '+';
+    display: inline-block;
+    margin-left: 10px;
+    color: $cor-principal;
+  }
+  @include resp(t){
+    font-size: em(20);
+    margin-bottom: 20px;
+  }
+} 
+
+.introducao__texto{
+  display: none;
+  margin: 20px 0;
+  font-size: 16px;
+}
+
+.introducao__check{
+  display: none;
+  &:checked  + .introducao__container .introducao__texto{
+    display: block;
+  }
+  &:checked + .introducao__container .introducao__titulo::after{
+    transform: rotate(45deg);
+    font-weight: bold;
+    font-size: em(20);
+  }
+}
+
+.introducao__tabela{
+  border-collapse: collapse;
+}
+.introducao__tabela thead tr{
+  background-color: #555;
+  text-align: left;
+  color: #fff;
+}
+.introducao__tabela thead tr th, .introducao__tabela tbody tr td{
+  padding: 15px 10px;
+}
+.introducao__tabela tbody tr:nth-of-type(even){
+  background-color: #ddd;
+}
+
+.notas,.computadores,.livros,.biblioteca,.incentivopais,.escolaridademae,.escolaridadepai{
+  display: none;
+}
