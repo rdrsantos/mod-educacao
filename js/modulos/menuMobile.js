@@ -4,6 +4,7 @@ export default function menuMobile(){
   const menu = document.querySelector('.header__menu')
 
   btnMobi.addEventListener('click', ()=>{
+    btnMobi.classList.toggle('ativo')
     menu.classList.toggle('ativo')
   })
 

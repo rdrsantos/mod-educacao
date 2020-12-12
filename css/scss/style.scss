@@ -34,40 +34,62 @@ body{
 
 .header__btn{
   display: none;
+  cursor: pointer;
+  position: relative;
   @include resp(t){
     display: block;
-    padding: 10px 15px;
-    font-weight: bold;
-    font-size: em(20);
-    cursor: pointer;
+  }
+  button{
+    display: block;
+    width: 50px;
+    height: 5px;
+    border: none;
+    background-color: $branco;
+    outline: none;
+    position: relative;
+    border-radius: 5px;
+    transition: .3s;
+  }
+  &::before, &::after{
+    content: '';
+    display: block;
+    width: 50px;
+    height: 5px;
+    background-color: $branco;
+    position: absolute;
+    border-radius: 5px;
+    transition: .3s;
+  }
+  &::before{
+    top: -15px;
+  }
+  &::after{
+    bottom: -15px;
+  }
+  &.ativo{
+    button{
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+    &::before{
+      transform: rotate(45deg);
+      top: 0;
+    }
+    &::after{
+      transform: rotate(-45deg);
+      bottom: 0;
+    }
   }
 }
 
 .header__menu{
   display: flex;
   transition: all .3s ease;
-  @include resp(m){
-    flex-direction: column;
-    position: absolute;
-    width: 100%;
-    top: 67px;
-    height: 0;
-    visibility: hidden;
-    opacity: 0;
-    left: 0;
-    z-index: 10;
-    background-color: $cor-principal;
-    &.ativo{
-      height: auto;
-      visibility: visible;
-      opacity: 1;
-    }
-  }
   @include resp(t){
     flex-direction: column;
     position: absolute;
     width: 100%;
-    top: 67px;
+    top: 66px;
     height: 0;
     visibility: hidden;
     opacity: 0;
